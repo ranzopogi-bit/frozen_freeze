@@ -34,6 +34,16 @@ public class FrozenFreeze extends JavaPlugin implements Listener {
         ItemMeta meta = item.getItemMeta();
         if (!meta.hasItemModel() || !swordModel.equals(meta.getItemModel())) return;
 
+        // Fire Aspect sets the target on fire right AFTER this event, and fire clears freezing.
+        // So freeze now, then again a couple of ticks later after putting any fire out.
+        freeze(target);
+        getServer().getScheduler().runTaskLater(this, () -> freeze(target), 1L);
+        getServer().getScheduler().runTaskLater(this, () -> freeze(target), 3L);
+    }
+
+    private void freeze(LivingEntity target) {
+        if (!target.isValid() || target.isDead()) return;
+        target.setFireTicks(0);
         // Freeze ticks drop by 2 per tick outside powder snow, so 40 per second keeps it frozen for about `seconds`.
         int ticks = target.getMaxFreezeTicks() + seconds * 40;
         target.setFreezeTicks(Math.max(target.getFreezeTicks(), ticks));

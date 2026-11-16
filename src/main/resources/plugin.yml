@@ -1,0 +1,5 @@
+name: FrozenFreeze
+version: 1.0.0
+main: com.frozen.freeze.FrozenFreeze
+api-version: '1.21'
+description: Frozen Sword hits apply the powder snow freeze effect.

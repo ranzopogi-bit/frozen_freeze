@@ -1,0 +1,4 @@
+# item_model of the sword that freezes people
+item-model: "minecraft:frozen_sword"
+# how long the freeze lasts, in seconds
+freeze-seconds: 5

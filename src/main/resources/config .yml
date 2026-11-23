@@ -1,9 +1,0 @@
-# item_model of the sword that freezes people
-item-model: "minecraft:frozen_sword"
-# how long the freeze lasts, in seconds
-freeze-seconds: 5
-# if you switch away from the sword (for example to a mace) and hit within this many ticks,
-# the hit still freezes and shows particles (20 ticks = 1 second)
-swap-leeway-ticks: 5
-# sweeping + crit particles on hit
-particles: true

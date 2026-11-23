@@ -1,0 +1,31 @@
+# ---------------- Frozen Sword ----------------
+# item_model of the sword that freezes people
+item-model: "minecraft:frozen_sword"
+# how long the freeze lasts, in seconds
+freeze-seconds: 5
+# sweeping + crit particles on hit
+particles: true
+
+# ---------------- Death Mace ----------------
+mace-item-model: "minecraft:death_mace"
+# right-click while looking up: teleport this many blocks up (stops lower if there is a ceiling)
+mace-teleport-blocks: 10
+mace-teleport-cooldown-seconds: 60
+# how far up you must look (degrees, negative = up). -45 means at least 45 degrees upward
+mace-look-up-pitch: -45
+# blindness given to whoever you hit
+mace-blindness-seconds: 3
+
+# ---------------- Breach swapping (both items) ----------------
+# if you switch away from the item (for example to a breach mace) and hit within this many ticks,
+# the hit still counts (20 ticks = 1 second)
+swap-leeway-ticks: 5
+
+# ---------------- Particle trails (while holding the item) ----------------
+sword-trail: true   # icy blue trail on the Frozen Sword
+mace-trail: true    # dark purple trail on the Death Mace
+trail-interval-ticks: 2
+# where the trail appears relative to you (tweak if it looks off the weapon)
+trail-forward: 0.9
+trail-up: 0.9
+trail-side: 0.5

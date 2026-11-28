@@ -1,0 +1,14 @@
+name: FrozenFreeze
+version: 1.4.0
+main: com.frozen.freeze.FrozenFreeze
+api-version: '1.21'
+description: Frozen Sword freeze + icy trail, Death Mace abilities + dark trail.
+commands:
+  goldencrown:
+    description: Give the Golden Crown
+    usage: /goldencrown [give] <player>
+    permission: frozenfreeze.crown
+permissions:
+  frozenfreeze.crown:
+    description: Allows giving the Golden Crown
+    default: op

@@ -31,3 +31,11 @@ trail-interval-ticks: 2
 trail-forward: 0.9
 trail-up: 0.9
 trail-side: 0.5
+
+# ---------------- Golden Crown (netherite helmet) ----------------
+crown-item-model: "minecraft:golden_crown"
+# extra max health in HP (2 HP = 1 heart). 20 = +10 hearts. Applies to crowns given AFTER you change it.
+crown-extra-health: 20
+# regeneration level while worn (0 = Regeneration I, 1 = Regeneration II)
+crown-regeneration-level: 1
+crown-trail: true

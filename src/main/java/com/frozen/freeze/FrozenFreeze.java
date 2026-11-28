@@ -62,6 +62,9 @@ public class FrozenFreeze extends JavaPlugin implements Listener {
     private final Particle.DustOptions iceDustBlue = new Particle.DustOptions(Color.fromRGB(110, 190, 255), 1.2f);
     private final Particle.DustOptions iceDustWhite = new Particle.DustOptions(Color.fromRGB(225, 245, 255), 1.0f);
 
+    // ----- Golden Crown -----
+    private GoldenCrown crown;
+
     // ----- shared -----
     private int leewayTicks;
 
@@ -97,7 +100,9 @@ public class FrozenFreeze extends JavaPlugin implements Listener {
         if (swordTrail || maceTrail) {
             getServer().getScheduler().runTaskTimer(this, this::tickTrails, 20L, trailInterval);
         }
-        getLogger().info("FrozenFreeze 1.3.1 enabled: sword freeze " + seconds + "s, mace teleport "
+        crown = new GoldenCrown(this);
+        crown.start();
+        getLogger().info("FrozenFreeze 1.4.0 enabled: sword freeze " + seconds + "s, mace teleport "
                 + teleportBlocks + " blocks / " + teleportCooldownSeconds + "s cooldown, blindness "
                 + blindnessSeconds + "s, swap-leeway-ticks=" + leewayTicks);
     }
